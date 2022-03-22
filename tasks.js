@@ -27,10 +27,9 @@ if(totalScore => minScore){
 
 const cashOut = +prompt('Сколько денег Вы хотите снять?');
 const minCash = 100; //мин. купюра
-const countBills = 20; //количество купюр по 100р в банкомате
-const countBillsCashOut = cashOut/minCash; 
+const modCashOut = cashOut % minCash;
 
-if(countBillsCashOut <= countBills){
+if(modCashOut === 0 ){
      console.log('Выдача денег')
  }else {
     console.log('В банкомате мало купюр')
